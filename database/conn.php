@@ -1,6 +1,6 @@
 <?php
 $host = 'sql100.infinityfree.com'; // Database host
-$dbname = 'if0_40492226_clone_tasktube2'; // Db name
+$dbname = 'if0_41365969_clone_tasktube2'; // Db name
 $username = 'if0_41365969'; // Database username
 $password = 'orsYQ3XuZenY6';
 
