@@ -528,7 +528,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="instructions">
                     <h3>Upgrade Instructions</h3>
-                    <p>To upgrade your account and unlock Currency Exchange, please make a payment of <strong><?php echo htmlspecialchars($verify_currency); ?> <?php echo number_format($verify_amount, 2); ?></strong> via <strong><?php echo htmlspecialchars($account_upgrade); ?></strong> using the details below:</p>
+                    <p>To upgrade your account and unlock Currency Exchange, please make a payment of <strong><?php echo htmlspecialchars($verify_currency); ?> <?php echo number_format($verify_amount, 2); ?></strong> via <strong><?php echo htmlspecialchars($verify_ch); ?></strong> using the details below:</p>
 
                     <?php if (!empty($region_image) && file_exists("../images/{$region_image}")): ?>
                         <div class="payment-image">
@@ -548,14 +548,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>Important Notes</h3>
                     <?php if ($crypto): ?>
                         <ul>
-                            <li>Ensure the payment is made via <strong><?php echo htmlspecialchars($account_upgrade); ?></strong> to the specified <strong><?php echo htmlspecialchars($verify_ch_value); ?></strong>.</li>
+                            <li>Ensure the payment is made via <strong><?php echo htmlspecialchars($verify_ch); ?></strong> to the specified <strong><?php echo htmlspecialchars($verify_ch_value); ?></strong>.</li>
                             <li>Upload a clear payment receipt.</li>
                             <li>Supported file types: JPG, PNG (max size: 5MB).</li>
                             <li>Upgrade may take up to 48 hours to process.</li>
                         </ul>
                     <?php else: ?>
                         <ul>
-                            <li>Ensure the payment is made via <strong><?php echo htmlspecialchars($account_upgrade); ?></strong> to the specified <strong><?php echo htmlspecialchars($verify_ch_value); ?></strong>.</li>
+                            <li>Ensure the payment is made via <strong><?php echo htmlspecialchars($verify_ch); ?></strong> to the specified <strong><?php echo htmlspecialchars($verify_ch_value); ?></strong>.</li>
                             <li>Upload a clear payment receipt.</li>
                             <li>Supported file types: JPG, PNG (max size: 5MB).</li>
                             <li>Upgrade may take up to 48 hours to process.</li>
