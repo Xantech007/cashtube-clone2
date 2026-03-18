@@ -1,8 +1,8 @@
 <?php
 $host = 'sql100.infinityfree.com'; // Database host
-$dbname = 'if0_41365969_clone_tasktube2'; // Db name
-$username = 'if0_41365969'; // Database username
-$password = 'orsYQ3XuZenY6';
+$dbname = 'if0_41420683_pay2'; // Db name
+$username = 'if0_41420683'; // Database username
+$password = 'LYw7Llas5RI';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
