@@ -1,6 +1,150 @@
 <?php
 // inc/header.php
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video Ads and Earn</title>
+
+    <!-- Favicon (using your logo) -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .hamburger-menu-button {
+            width: 40px;
+            height: 40px;
+            background: #6e44ff;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamburger-menu-button span {
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu-button span::before,
+        .hamburger-menu-button span::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu-button span::before {
+            transform: translateY(-6px);
+        }
+
+        .hamburger-menu-button span::after {
+            transform: translateY(6px);
+        }
+
+        .hamburger-menu-button-close span {
+            background: transparent;
+        }
+
+        .hamburger-menu-button-close span::before {
+            transform: translateY(0) rotate(45deg);
+        }
+
+        .hamburger-menu-button-close span::after {
+            transform: translateY(0) rotate(-45deg);
+        }
+
+        .notification-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 15px 20px;
+            max-width: 320px;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: all 0.4s ease;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .notification-popup.notification-show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .notification-content {
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .notification-content i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .notification-popup {
+                right: 10px;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
 
 <header>
     <div class="header-container">
@@ -25,135 +169,6 @@
     </div>
 </div>
 
-<style>
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 15px 20px;
-        z-index: 1000;
-    }
-
-    .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 50px;
-        border-radius: 50%;
-    }
-
-    .logo a {
-        display: inline-block;
-        text-decoration: none;
-    }
-
-    .hamburger-menu-button {
-        width: 40px;
-        height: 40px;
-        background: #6e44ff;
-        border: 3px solid #fff;
-        border-radius: 50%;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hamburger-menu-button span {
-        width: 20px;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger-menu-button span::before,
-    .hamburger-menu-button span::after {
-        content: '';
-        width: 20px;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger-menu-button span::before {
-        transform: translateY(-6px);
-    }
-
-    .hamburger-menu-button span::after {
-        transform: translateY(6px);
-    }
-
-    .hamburger-menu-button-close span {
-        background: transparent;
-    }
-
-    .hamburger-menu-button-close span::before {
-        transform: translateY(0) rotate(45deg);
-    }
-
-    .hamburger-menu-button-close span::after {
-        transform: translateY(0) rotate(-45deg);
-    }
-
-    .notification-popup {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: linear-gradient(135deg, #28a745, #20c997);
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        padding: 15px 20px;
-        max-width: 320px;
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: all 0.4s ease;
-        z-index: 1001;
-        display: flex;
-        align-items: center;
-        color: #fff;
-    }
-
-    .notification-popup.notification-show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .notification-content {
-        font-size: 15px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-    }
-
-    .notification-content i {
-        margin-right: 10px;
-        font-size: 20px;
-    }
-
-    @media (max-width: 768px) {
-        .notification-popup {
-            right: 10px;
-            max-width: 90%;
-        }
-    }
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
     // Hamburger Menu
     const button = document.getElementById('hamburger-menu');
@@ -215,14 +230,3 @@
         setTimeout(() => showNotification(message), (i + 1) * delay);
     });
 </script>
-
-
-<head>
-    <meta charset="UTF-8">
-    <title>Watch Video Ads and Earn</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="shortcut icon" href="img/favicon.png">
-
-</head>
