@@ -215,3 +215,14 @@
         setTimeout(() => showNotification(message), (i + 1) * delay);
     });
 </script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Watch Video Ads and Earn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+</head>
