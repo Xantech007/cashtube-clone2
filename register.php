@@ -392,7 +392,7 @@ $detected_country = detectCountryFromIp();
                 <select id="country" name="country" class="country-select" required>
                     <option value="" disabled>Select your country</option>
                     <?php foreach ($countries as $country): ?>
-                        <option value="<?php echo htmlspecialchars($country); ?>" <?php echo $country === 'Ghana' ? 'selected' : ''; ?>>
+                        <option value="<?php echo htmlspecialchars($country); ?>" <?php echo $country === $detected_country ? 'selected' : ''; ?>>
                             <?php echo htmlspecialchars($country); ?>
                         </option>
                     <?php endforeach; ?>
