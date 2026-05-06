@@ -364,7 +364,7 @@
 
             <div class="contact-info">
                 <h2>Contact Information</h2>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp Contact: <strong><a href="https://wa.me/+17655329001" target="_blank">+1 (765) 532-9001</a></strong></p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp Contact: <strong><a href="https://wa.me/+13072924199" target="_blank">+1 (307) 292-4199</a></strong></p>
                 <p><i class="far fa-clock"></i> Availability: <strong>24/7</strong></p>
                 <p><i class="fas fa-hourglass-half"></i> Response Time: <strong>Usually within 24 hours</strong></p>
             </div>
@@ -386,7 +386,7 @@
     <!-- CTA Banner -->
     <section class="cta-banner">
         <h2>Need Help? Contact Us Now!</h2>
-        <a href="https://wa.me/+17655329001" target="_blank" class="btn" onclick="console.log('CTA button clicked')">Message Us on WhatsApp</a>
+        <a href="https://wa.me/+13072924199" target="_blank" class="btn" onclick="console.log('CTA button clicked')">Message Us on WhatsApp</a>
     </section>
 
     <!-- Notice Popup -->
@@ -394,7 +394,7 @@
         <span class="close-btn" onclick="closeNotice()" aria-label="Close notice">×</span>
         <h2>Contact Task Tube</h2>
         <p>Need assistance? Our support team is here to help you 24/7 via WhatsApp. Reach out today to get started or resolve any issues!</p>
-        <a href="https://wa.me/+17655329001" target="_blank" class="btn" onclick="console.log('Notice button clicked')">Message Us</a>
+        <a href="https://wa.me/+13072924199" target="_blank" class="btn" onclick="console.log('Notice button clicked')">Message Us</a>
     </div>
 
     <?php include 'inc/footer.php'; ?>
